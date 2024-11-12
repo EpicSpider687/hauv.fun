@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: #f4f4f9;
+    background-color: #777777;
     color: #333;
 }
 
 /* Header styling */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #464646;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -46,14 +46,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #4CAF50;
+    color: #111111;
 }
 
 /* Main content styling */
@@ -69,7 +69,7 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #4CAF50;
+    color: #000000;
 }
 
 /* Game grid styling */
@@ -80,7 +80,8 @@ section h2 {
 }
 
 .game-tile {
-    background-color: #ddd;
+    border: 2px solid #000000;
+    background-color: rgb(155, 155, 155);
     padding: 1rem;
     text-align: center;
     border-radius: 8px;
@@ -98,9 +99,9 @@ section h2 {
 
 /* iFrame container styling */
 .iframe-container {
-    border: 2px solid #ccc;
+    border: 2px solid #000000;
     padding: 1rem;
-    background-color: white;
+    background-color: rgb(155, 155, 155);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
