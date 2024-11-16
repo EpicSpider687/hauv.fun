@@ -130,7 +130,7 @@ nav ul li a.active {
 
 .game-tile {
     background-color: #bbbbbb;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 8px;
     text-decoration: none;
@@ -141,7 +141,7 @@ nav ul li a.active {
 }
 
 .game-tile:hover {
-    background-color: #bbb;
+    background-color: #6e6e6e;
     transform: translateY(-5px);
 }
 
