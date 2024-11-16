@@ -114,3 +114,49 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+/* Highlight active navigation link */
+nav ul li a.active {
+    color: #111111; /* Gold color to highlight the active link */
+}
+
+/* Game tiles for More Games page */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.game-tile {
+    background-color: #bbbbbb;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+.game-tile:hover {
+    background-color: #bbb;
+    transform: translateY(-5px);
+}
+
+/* Center iframe container */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #5c5c5c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
