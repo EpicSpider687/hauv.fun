@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            height: 100vh;
+            margin: 0;
+        }
+        #cookie {
+            width: 200px;
+            height: 200px;
+            background-color: #d2691e;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 300px; 
+            color: #fff;
+            user-select: none;
+        }
+        #scoreDisplay {
+            font-size: 24px;
+            margin: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:disabled {
+            background-color: #9E9E9E;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="scoreDisplay">Score: 0</div>
+    <div id="cookie">🍪</div>
+    <button id="clickPowerButton" class="button">Upgrade Click Power (Cost: 10)</button>
+    <button id="autoClickerButton" class="button">Buy Auto Clicker (Cost: 50)</button>
+
+    <script>
+        let score = 0;
+        let clickPower = 1;
+        let autoClickerEnabled = false;
+        let clickPowerCost = 10;
+        let autoClickerCost = 50;
+
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const cookie = document.getElementById('cookie');
+        const clickPowerButton = document.getElementById('clickPowerButton');
+        const autoClickerButton = document.getElementById('autoClickerButton');
+
+        function updateScoreDisplay() {
+            scoreDisplay.textContent = `Score: ${score}`;
+            clickPowerButton.disabled = score < clickPowerCost;
+            autoClickerButton.disabled = score < autoClickerCost || autoClickerEnabled;
+        }
+
+        cookie.addEventListener('click', () => {
+            score += clickPower;
+            updateScoreDisplay();
+        });
+
+        clickPowerButton.addEventListener('click', () => {
+            if (score >= clickPowerCost) {
+                score -= clickPowerCost;
+                clickPower++;
+                clickPowerCost = Math.floor(clickPowerCost * 1.5); // Increase the cost
+                clickPowerButton.textContent = `Upgrade Click Power (Cost: ${clickPowerCost})`;
+                updateScoreDisplay();
+            }
+        });
+
+        autoClickerButton.addEventListener('click', () => {
+            if (score >= autoClickerCost && !autoClickerEnabled) {
+                score -= autoClickerCost;
+                autoClickerEnabled = true;
+                autoClickerButton.textContent = 'Auto Clicker Purchased';
+                autoClickerButton.disabled = true;
+
+                setInterval(() => {
+                    score += clickPower;
+                    updateScoreDisplay();
+                }, 1000); // Auto click every second
+            }
+        });
+
+        updateScoreDisplay();
+    </script>
+</body>
+</html>
