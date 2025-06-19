@@ -1,122 +1,52 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hauv.fun</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="/images/favicon.png" type="image/png">
-    <meta name="google-adsense-account" content="ca-pub-4997271158307145">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4997271158307145"
-     crossorigin="anonymous"></script>
+<meta charset="UTF-8" />
+<title>Never Gonna Give You Up</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%; overflow: hidden;
+    background: black;
+  }
+  iframe {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    border: none;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Hauv.fun</h1>
-        <p>A website made by your local pebble dealers - Bentley, Liam, and Evan.</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="/more-games">More Games</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </nav>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&disablekb=1&modestbranding=1&rel=0&loop=1&playlist=dQw4w9WgXcQ" allow="autoplay" allowfullscreen></iframe>
 
-    <main>
-        <section id="featured-games">
-            <h2>Featured Games</h2>
-            <div class="game-grid">
-                <!-- games -->
-                <a href="games/nightshift" class="game-tile">Nightshift</a>
-                <a href="https://scratch.mit.edu/projects/1089214778" class="game-tile">Butter Clicker</a>
-                <a href="games/getting-over-it" class="game-tile">Getting Over It</a>
+<script>
+// Disable right click
+document.addEventListener('contextmenu', e => e.preventDefault());
 
-            </div>
-        </section>
+// Disable keyboard shortcuts (like Ctrl+W, Ctrl+R, F5, etc.)
+document.addEventListener('keydown', function(e) {
+  // List of keys to block
+  const blockedKeys = [
+    'F5', 'F12',
+    'r', 'R',
+    'w', 'W',
+    'F11',
+  ];
 
-        <section id="all-games">
-            <h2>All Games</h2>
-            <div class="game-grid">
-                <!--games-->
-                <a href="https://scratch.mit.edu/projects/1086027354" class="game-tile">Butter Dash V1.0</a>
-                <a href="https://scratch.mit.edu/projects/1089214778" class="game-tile">Butter Clicker</a>
-                <a href="https://scratch.mit.edu/projects/1091931456" class="game-tile">Ipad Kid Sim</a>
-                <a href="games/geometry-dash" class="game-tile">Geometry Dash</a>
-                <a href="games/crystal-seeker" class="game-tile">Crystal Seeker</a>
-                <a href="games/getting-over-it" class="game-tile">Getting Over It</a>
-                <a href="games/papermc" class="game-tile">Paper Minecraft</a>
-                <a href="games/pinball" class="game-tile">Pinball</a>
-                <a href="games/walmart-cookie-clicker" class="game-tile">Walmart Cookie Clicker</a>
-                <a class="game-tile" href="/games/nightshift"><p>Nightshift</p></a>
-                 <a class="game-tile" href="/games/slither-io">
-                    <p>Slither.io</p>
-                </a>
-                <a class="game-tile" href="/games/platformer">
-                    <p>Platformer</p>
-                </a>
-                <a class="game-tile" href="/games/ball-physics">
-                    <p>Ball Physics</p>
-                </a>
-                <a class="game-tile" href="/games/carcassonne">
-                    <p>Carcassonne</p>
-                </a>
-                <a class="game-tile" href="/games/famished-fish">
-                    <p>Famished Fish</p>
-                </a>
-                <a class="game-tile" href="/games/3d-sketch">
-                    <p>3D Sketching</p>
-                </a>
-                <a class="game-tile" href="/games/head-sphere">
-                    <p>Head Spheres</p>
-                </a>
-                <a class="game-tile" href="/games/pop-the-bubble">
-                    <p>Pop The Bubbles</p>
-                </a>
-                <a class="game-tile" href="/games/unlock-me">
-                    <p>Unlock Me</p>
-                </a>
-                <a class="game-tile" href="/games/terraria">
-                    <p>Terraria</p>
-                </a>
-                <a class="game-tile" href="/games/ragdoll">
-                    <p>Ragdoll</p>
-                </a>
-                <a class="game-tile" href="/games/scratchnapped">
-                    <p>Scratchnapped</p>
-                </a>
-                <a class="game-tile" href="/games/are-you-lucky">
-                    <p>Are you lucky</p>
-                </a>
-                <a class="game-tile" href="/games/racing">
-                    <p>Racing</p>
-                </a>
-                <a class="game-tile" href="/games/sbox">
-                    <p>Sbox</p>
-                </a>
-                <a class="game-tile" href="/games/stickman">
-                    <p>Stickman</p>
-                </a>
-                <a class="game-tile" href="/games/car-chase">
-                    <p>Car Chase</p>
-                </a>
-            </div>
-        </section>
+  if ((e.ctrlKey || e.metaKey) && blockedKeys.includes(e.key)) {
+    e.preventDefault();
+  }
 
-        <section id="iframes">
-            <h2>Our Games</h2>
-            <div class="iframe-container">
-                <!--frames -->
-                <iframe src="https://scratch.mit.edu/projects/1086027354/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                <iframe src="https://scratch.mit.edu/projects/1089214778/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                <iframe src="https://scratch.mit.edu/projects/1091931456/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
+  // Block Escape
+  if (e.key === 'Escape') {
+    e.preventDefault();
+  }
+});
 
-    <footer>
-        <p>2024 Hauv.fun.</p>
-    </footer>
+// Prevent leaving page (simple version)
+window.onbeforeunload = function() {
+  return "Are you sure you want to leave?";
+};
+</script>
+
 </body>
 </html>
