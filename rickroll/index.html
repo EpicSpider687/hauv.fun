@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Never Gonna Give You Up</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%; overflow: hidden;
+    background: black;
+  }
+  iframe {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+    pointer-events: none; /* disable clicks */
+  }
+</style>
+</head>
+<body>
+
+<iframe 
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&disablekb=1&modestbranding=1&rel=0&loop=1&playlist=dQw4w9WgXcQ" 
+  allow="autoplay" 
+  allowfullscreen
+></iframe>
+
+<script>
+// Disable right-click
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Disable keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  const blockedKeys = ['F5', 'F12', 'r', 'R', 'w', 'W', 'F11'];
+  if ((e.ctrlKey || e.metaKey) && blockedKeys.includes(e.key)) e.preventDefault();
+  if (e.key === 'Escape') e.preventDefault();
+});
+
+// Warn if user tries to leave
+window.onbeforeunload = function() {
+  return "Are you sure you want to leave?";
+};
+</script>
+
+</body>
+</html>
 
