@@ -6,8 +6,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
 const books = [
     { 
         title: "Sword Art Online Vol. 1", 
-        icon: "icons/SAO-V1-Icon.png", 
-        pdf: "books/SwordArtOnline-Volume1.pdf" 
+        icon: "SAO-V1-Icon.png", 
+        pdf: "SwordArtOnline-Volume1.pdf" 
     }
 ];
 
