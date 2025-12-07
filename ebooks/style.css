@@ -1,43 +1,77 @@
+/* Base styles - Dark Mode */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #f5f5f5;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #121212; /* Dark background */
+    color: #f0f0f0; /* Light text */
 }
 
-h1 {
-  margin-top: 20px;
-}
-
-.shelf {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin: 40px;
+#book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
 }
 
 .book {
-  width: 140px;
-  cursor: pointer;
+    margin: 10px;
+    cursor: pointer;
+    width: 30%;
+    max-width: 150px;
+    min-width: 120px;
+    flex-grow: 1;
 }
 
 .book img {
-  width: 120px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.2); /* light shadow for dark bg */
+    transition: transform 0.2s;
 }
 
-.book p {
-  margin-top: 8px;
-  font-weight: bold;
+.book img:hover {
+    transform: scale(1.05);
 }
 
-.controls {
-  margin: 10px;
+#reader-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95); /* darker overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-canvas {
-  max-width: 100%;
+#reader-modal.hidden {
+    display: none;
+}
+
+#reader-modal canvas {
+    border: 1px solid white;
+    max-width: 100%;
+    max-height: 80%;
+}
+
+#reader-modal button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reader-modal button:hover {
+    background-color: #444;
 }
