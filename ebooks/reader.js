@@ -38,14 +38,4 @@ function renderPage(num) {
 
 document.getElementById("next").onclick = () => {
   if (pageNum < pdfDoc.numPages) {
-    pageNum++;
-    renderPage(pageNum);
-  }
-};
-
-document.getElementById("prev").onclick = () => {
-  if (pageNum > 1) {
-    pageNum--;
-    renderPage(pageNum);
-  }
-};
+   
