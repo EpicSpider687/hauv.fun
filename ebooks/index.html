@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ebooks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Ebooks</h1>
+
+  <div class="shelf" id="shelf"></div>
+
+  <script src="books.js"></script>
+  <script>
+    function openBook(book) {
+      window.open(`reader.html?book=${book}`, "_blank");
+    }
+
+    const shelf = document.getElementById("shelf");
+
+    books.forEach(b => {
+      shelf.innerHTML += `
+        <div class="book" onclick="openBook('${b.pdf}')">
+          <img src="icons/${b.icon}" onerror="this.src='icons/default.png'">
+          <p>${b.title}</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
 
