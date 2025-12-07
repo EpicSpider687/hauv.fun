@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Reader</title>
-  <script src="pdfjs/pdf.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
+
+  <div class="controls">
     <button id="prev">⬅ Prev</button>
     <span id="pageInfo"></span>
     <button id="next">Next ➡</button>
@@ -15,7 +15,6 @@
 
   <canvas id="pdfCanvas"></canvas>
 
-  <script src="reader.js"></script>
+  <script type="module" src="reader.js"></script>
 </body>
 </html>
-
