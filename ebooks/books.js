@@ -5,4 +5,3 @@ const books = [
     icon: "book1.png"
   }
 ];
-
