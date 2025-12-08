@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ebooks</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <h1>Ebooks</h1>
 
   <div class="shelf" id="shelf"></div>
 
-  <script src="books.js"></script>
   <script>
+    const books = [
+      {
+        title: "Sword Art Online - Volume 1",
+        pdf: "SwordArtOnline-Volume1.pdf",
+        icon: "SAO-V1-Icon.png"
+      }
+    ];
+
     function openBook(book) {
       window.open(`reader.html?book=${book}`, "_blank");
     }
@@ -29,8 +35,5 @@
       `;
     });
   </script>
-
 </body>
 </html>
-
-
